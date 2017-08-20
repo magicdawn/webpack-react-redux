@@ -1,0 +1,7 @@
+parser: babel-eslint
+
+env:
+  browser: true
+
+globals:
+  __DEV__: true
