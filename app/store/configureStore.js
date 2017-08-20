@@ -32,13 +32,15 @@ const enhancers = [
  * DevTools
  */
 
+let composeEnhancers = compose
+
 if (
   process.env.NODE_ENV !== 'production' &&
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 ) {
-  compose = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 }
 
 export function configureStore(initialState) {
-  return createStore(rootReducer, initialState, compose(...enhancers))
+  return createStore(rootReducer, initialState, composeEnhancers(...enhancers))
 }
