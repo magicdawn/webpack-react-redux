@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { footer } from '../styles/footer.scss';
-import Routes from '../routes';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { footer } from '../styles/footer.scss'
+import Routes from '../routes'
 
 const App = () =>
     <div>
@@ -11,6 +11,6 @@ const App = () =>
             <Link to="/">Filterable Table</Link>
             <Link to="/about">About</Link>
         </footer>
-    </div>;
+    </div>
 
-export default App;
+export default App

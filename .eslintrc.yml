@@ -40,4 +40,4 @@ parserOptions:
 
 extends:
   - 'eslint:recommended'
-  - .eslint.fe.yml
+  - .eslintrc.fe.yml

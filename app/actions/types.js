@@ -1,1 +1,1 @@
-export const FILTER = 'FILTER';
+export const FILTER = 'FILTER'

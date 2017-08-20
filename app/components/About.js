@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const About = () =>
     <div>
@@ -11,7 +11,7 @@ const About = () =>
                 scrolling="0">
             </iframe>
         </div>
-    </div>;
+    </div>
 
 
-export default About;
+export default About
