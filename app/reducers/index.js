@@ -11,10 +11,9 @@ const filter = (state = '', action) => {
   }
 }
 
-
 const rootReducer = combineReducers({
   filter,
-  routing
+  routing,
 })
 
 export default rootReducer

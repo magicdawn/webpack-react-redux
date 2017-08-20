@@ -9,37 +9,35 @@ const FilterableTable = ({ filter, onFilter }) => {
   let input
 
   return (
-        <div className={filterableTable}>
-            <input
-                value={filter}
-                ref={node => {
-                  input = node
-                }}
-                onChange={() => onFilter(input.value)} />
+    <div className={filterableTable}>
+      <input
+        value={filter}
+        ref={node => {
+          input = node
+        }}
+        onChange={() => onFilter(input.value)}
+      />
 
-            <ProductTable filter={filter} />
-        </div>
+      <ProductTable filter={filter} />
+    </div>
   )
 }
 
 FilterableTable.propTypes = {
   filter: PropTypes.string,
-  onFilter: PropTypes.func
+  onFilter: PropTypes.func,
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    filter: state.filter
+    filter: state.filter,
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    onFilter: filterText => dispatch(filterTable(filterText))
+    onFilter: filterText => dispatch(filterTable(filterText)),
   }
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(FilterableTable)
+export default connect(mapStateToProps, mapDispatchToProps)(FilterableTable)
